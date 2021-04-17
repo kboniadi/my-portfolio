@@ -1,21 +1,45 @@
 .nav {
-    transition-timing-function: ease-in;
-    transition: background-color 0.5s ease;
-    background-color: transparent;
-    height: 6rem;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
-    transition: height .5s ease;
-    .container {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .laptopIcon {
-        font-size: x-large;
-    }
+  transition-timing-function: ease-in;
+  transition: background-color 0.5s ease;
+  background-color: transparent;
+  height: 6rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+  transition: height 0.5s ease;
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .laptopIcon {
+    font-size: x-large;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 6rem;
+    background: white;
+    right: -100%; /* pull the menu out of the viewport from right */
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    transition: right 0.3s ease; /* transition for smooth sliding */
+  }
+  .navbar-collapse.show {
+    right: 0; /* push the menu back to viewport */
+  }
 }
 
 .nav-white {
-    background-color: white;
-    box-shadow: 0 3px 1rem rgba(0, 0, 0, .1);
-    height: 4rem;
+  background-color: white;
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
+  height: 4rem;
+  @media (max-width: 992px) {
+    .navbar-collapse {
+      top: 4rem;
+    }
+    .navbar-collapse.show {
+      right: 0; /* push the menu back to viewport */
+    }
+  }
 }

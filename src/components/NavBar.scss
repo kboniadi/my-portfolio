@@ -1,0 +1,21 @@
+.nav {
+    transition-timing-function: ease-in;
+    transition: background-color 0.5s ease;
+    background-color: transparent;
+    height: 6rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    transition: height .5s ease;
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .laptopIcon {
+        font-size: x-large;
+    }
+}
+
+.nav-white {
+    background-color: white;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, .1);
+    height: 4rem;
+}
